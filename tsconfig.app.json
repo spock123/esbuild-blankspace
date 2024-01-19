@@ -4,8 +4,7 @@
     "compilerOptions": {
         "outDir": "./out-tsc/app",
         "typeRoots": ["node_modules/@types"],
-
-        "types": ["@angular/localize", "googlemaps"]
+        "types": ["@angular/localize"]
     },
     "files": ["src/main.ts"],
     "include": ["src/**/*.d.ts", "src/app/", "src/app/**.lazy.ts"]

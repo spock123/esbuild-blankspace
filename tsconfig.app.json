@@ -7,5 +7,5 @@
         "types": ["@angular/localize"]
     },
     "files": ["src/main.ts"],
-    "include": ["src/**/*.d.ts", "src/app/", "src/app/**.lazy.ts"]
+    "include": ["src/**/*.d.ts", "src/app/"]
 }

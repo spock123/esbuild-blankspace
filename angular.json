@@ -57,26 +57,29 @@
             },
             "architect": {
                 "build": {
-                    "builder": "@angular-devkit/build-angular:browser-esbuild",
+                    "builder": "@angular-devkit/build-angular:application",
                     "options": {
                        
                         "outputPath": "dist/totti/",
                         "index": "src/index.html",
-                        "main": "src/main.ts",
+                        "browser": "src/main.ts",
                         "polyfills": ["zone.js"],
                         "tsConfig": "tsconfig.app.json",
                         "inlineStyleLanguage": "scss",
                         "styles": ["src/styles/index.scss"],
                         "assets": [],
                         "scripts": [],
-                        "serviceWorker": true,
-                        "ngswConfigPath": "ngsw-config.json",
                         "localize": true,
                         "i18nDuplicateTranslation": "ignore",
 
                         "preserveSymlinks": false
                     },
                     "configurations": {
+
+                        "production": {
+                            "outputHashing": "all"
+
+                        }, 
                        
                       
                         "development": {
@@ -88,14 +91,11 @@
                              
                             ],
                             "outputHashing": "all",
+                            "optimization": false,
                             "sourceMap": true,
-                            "vendorChunk": false,
-                            "buildOptimizer": false,
-                            "serviceWorker": true,
                             "namedChunks": false
                         },
                         "local": {
-                            "buildOptimizer": false,
                             "optimization": false,
                             "sourceMap": true,
                             "fileReplacements": []
